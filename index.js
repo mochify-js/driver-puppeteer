@@ -5,7 +5,7 @@ const driver = require('puppeteer');
 /**
  * @typedef {import('node:stream').Writable} Writable
  * @typedef {import('puppeteer').PuppeteerLaunchOptions} PuppeteerLaunchOptions
- * @typedef {import('../mochify').MochifyDriver} MochifyDriver
+ * @typedef {import('@mochify/mochify').MochifyDriver} MochifyDriver
  */
 
 /**
@@ -79,6 +79,10 @@ async function mochifyDriver(options = {}) {
 
   await page.goto(url);
 
+  /**
+   * @param {string} script
+   * @returns {Promise<Object>}
+   */
   function evaluate(script) {
     return page.evaluate(script);
   }
