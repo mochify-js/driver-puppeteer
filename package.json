@@ -1,6 +1,6 @@
 {
   "name": "@mochify/driver-puppeteer",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Puppeteer driver for Mochify",
   "homepage": "https://github.com/mochify-js/driver-puppeteer",
   "main": "index.js",
