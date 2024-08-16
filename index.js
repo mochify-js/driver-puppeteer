@@ -38,10 +38,8 @@ async function mochifyDriver(options = {}) {
   ];
 
   const browser = await driver.launch({
-    headless: 'new',
-    ignoreHTTPSErrors: true,
-    // Workaround for https://github.com/puppeteer/puppeteer/issues/6957
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+    headless: true,
+    acceptInsecureCerts: true,
     ...launch_options
   });
 
@@ -52,7 +50,7 @@ async function mochifyDriver(options = {}) {
     if (type === 'log') {
       return;
     }
-    if (type === 'warning' && text.includes('window.webkitStorageInfo')) {
+    if (type === 'warn' && text.includes('window.webkitStorageInfo')) {
       // Swallow deprecation warning.
       return;
     }
