@@ -3,9 +3,9 @@
 const driver = require('puppeteer');
 
 /**
- * @typedef {import('node:stream').Writable} Writable
- * @typedef {import('puppeteer').PuppeteerLaunchOptions} PuppeteerLaunchOptions
- * @typedef {import('@mochify/mochify').MochifyDriver} MochifyDriver
+ * @import { Writable } from 'node:stream'
+ * @import { PuppeteerLaunchOptions } from 'puppeteer'
+ * @import { MochifyDriver } from '@mochify/mochify'
  */
 
 /**
