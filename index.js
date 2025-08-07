@@ -37,6 +37,11 @@ async function mochifyDriver(options = {}) {
     ...extra_args
   ];
 
+  // Add CI-specific flags only when running in CI environments
+  if (process.env.CI || process.env.GITHUB_ACTIONS) {
+    launch_options.args.push('--no-sandbox');
+  }
+
   const browser = await driver.launch({
     headless: true,
     acceptInsecureCerts: true,
