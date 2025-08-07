@@ -4,7 +4,7 @@ const driver = require('puppeteer');
 
 /**
  * @import { Writable } from 'node:stream'
- * @import { PuppeteerLaunchOptions } from 'puppeteer'
+ * @import { LaunchOptions } from 'puppeteer'
  * @import { MochifyDriver } from '@mochify/mochify'
  */
 
@@ -17,7 +17,7 @@ const driver = require('puppeteer');
 exports.mochifyDriver = mochifyDriver;
 
 /**
- * @param {PuppeteerDriverOptions & PuppeteerLaunchOptions} [options]
+ * @param {PuppeteerDriverOptions & LaunchOptions} [options]
  * @returns {Promise<MochifyDriver>}
  */
 async function mochifyDriver(options = {}) {
