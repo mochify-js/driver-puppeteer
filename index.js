@@ -4,7 +4,7 @@ const driver = require('puppeteer');
 
 /**
  * @import { Writable } from 'node:stream'
- * @import { PuppeteerLaunchOptions } from 'puppeteer'
+ * @import { LaunchOptions } from 'puppeteer'
  * @import { MochifyDriver } from '@mochify/mochify'
  */
 
@@ -17,7 +17,7 @@ const driver = require('puppeteer');
 exports.mochifyDriver = mochifyDriver;
 
 /**
- * @param {PuppeteerDriverOptions & PuppeteerLaunchOptions} [options]
+ * @param {PuppeteerDriverOptions & LaunchOptions} [options]
  * @returns {Promise<MochifyDriver>}
  */
 async function mochifyDriver(options = {}) {
@@ -36,6 +36,11 @@ async function mochifyDriver(options = {}) {
     '--disable-dev-shm-usage',
     ...extra_args
   ];
+
+  // Add CI-specific flags only when running in CI environments
+  if (process.env.CI || process.env.GITHUB_ACTIONS) {
+    launch_options.args.push('--no-sandbox');
+  }
 
   const browser = await driver.launch({
     headless: true,
