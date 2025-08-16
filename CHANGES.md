@@ -1,5 +1,14 @@
 # Changes
 
+## 1.0.1
+
+- [`e320a27`](https://github.com/mochify-js/driver-puppeteer/commit/e320a27418f0a89e0078f584607f45d0cd7a4baf)
+  doc: update README.md (Yashar Fakhari)
+- [`634f35e`](https://github.com/mochify-js/driver-puppeteer/commit/634f35ebf73c3b20e204fb7bf04d163c71bd2353)
+  ci: require code coverage (Yashar Fakhari)
+
+_Released by Yashar Fakhari on 2025-08-16._
+
 ## 1.0.0
 
 - [`b105ec3`](https://github.com/mochify-js/driver-puppeteer/commit/b105ec33ea20b62521aa3d2b11265bd3e59cdd34)
