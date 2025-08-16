@@ -1,5 +1,21 @@
 # Changes
 
+## 1.0.0
+
+- [`b105ec3`](https://github.com/mochify-js/driver-puppeteer/commit/b105ec33ea20b62521aa3d2b11265bd3e59cdd34)
+  doc: update readme.md (Yashar Fakhari)
+- [`6ef5b50`](https://github.com/mochify-js/driver-puppeteer/commit/6ef5b50b4a7fededa8436b2e6de8740e6400d9ed)
+  ci: add c8 code coverage and Dependabot configs (Yashar Fakhari)
+- [`402a189`](https://github.com/mochify-js/driver-puppeteer/commit/402a18909b1e438b288ba8fcab2334a44af4ecb5)
+  chore: Update dependencies (Yashar Fakhari)
+    >
+    > - Upgraded Puppeteer to v24.16.0; PuppeteerLaunchOptions deprecated in favor of LaunchOptions
+    > - Upgraded ESLint from v8 to v9; using @studio/eslint-config v8.0.1 with new flat config file: eslint.config.js
+    > - Updated minimum Node.js requirement to v20 (Node.js 18 reaches EOL in April 2025)
+    > - Updated GitHub workflow: added read-only permissions, updated to Node.js 20/22 matrix, and included build step in CI checks
+
+_Released by Yashar Fakhari on 2025-08-16._
+
 ## 0.4.0
 
 - [`15228af`](https://github.com/mochify-js/driver-puppeteer/commit/15228afc643f4a56ced00b7cea981e46d598a3c1)
