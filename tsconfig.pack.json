@@ -8,5 +8,11 @@
     "emitDeclarationOnly": true
   },
   "include": ["**/*.js"],
-  "exclude": ["node_modules", "**/*.test.js", "test/**", "eslint.config.js"]
+  "exclude": [
+    "node_modules",
+    "**/*.test.js",
+    "test/**",
+    "eslint.config.js",
+    "coverage"
+  ]
 }
