@@ -2,6 +2,10 @@
 
 Run tests in [Puppeteer][web].
 
+Use this driver with the [Mochify CLI][cli] to run Mocha tests in Puppeteer. See [Mochify][mochify-docs] if you are looking for Mochify drivers for other browser testing environments.
+
+[mochify-docs]: https://github.com/mochify-js
+[cli]: https://github.com/mochify-js/cli
 [web]: https://pptr.dev/
 
 ## Usage
