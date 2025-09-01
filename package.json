@@ -39,7 +39,7 @@
     "ignore": "node_modules/**"
   },
   "dependencies": {
-    "puppeteer": "^24.16.2"
+    "puppeteer": "^24.17.1"
   },
   "peerDependencies": {
     "@mochify/mochify": "^1.0.1"
