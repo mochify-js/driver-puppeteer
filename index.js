@@ -64,10 +64,10 @@ async function mochifyDriver(options = {}) {
   });
 
   /**
-   * @param {Error} err
+   * @param {unknown} err
    */
   function handlePuppeteerError(err) {
-    stderr.write(err.stack || String(err));
+    stderr.write((err instanceof Error && err.stack) || String(err));
     stderr.write('\n');
     process.exitCode = 1;
     end();
